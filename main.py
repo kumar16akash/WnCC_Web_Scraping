@@ -2,8 +2,8 @@
     Alok Kumar Bishoyi
     160040093, Civil
 
-    Objective - Given a list of artist names, we would like to find out the number of of
-                occurrences of the word in their lyrics.
+    Objective - Given a list of artist names, we would like to find out the number of
+                occurrences of a particular word in their lyrics.
 
                 We would be reading the list and the word to be searched from "List.txt" file
 
@@ -40,19 +40,20 @@ record = []
 
 
 for name in names:
-    '''
-        get base_url. It contains exhaustive links to pages that have lyrics.
-        eg:- for artist Adele, it  "http://www.azlyrics.com/a/adele.html"
-    '''
+
+    ####   get base_url. It contains exhaustive links to pages that have lyrics.
+    ####   eg:- for artist Adele, it  "http://www.azlyrics.com/a/adele.html"
+
+
     base_url = url_functions.get_base_url( name )
 
-    '''
-        Get the appropriate tags in the html file that will help us get url address of the lyric pages
-        eg:- "<a href="../lyrics/adele/daydreamer.html" target="_blank">Daydreamer</a>"
-             will help us get the url address of the page that contains lyrics to the song
-             "daydreamer" of the artist adele
 
-    '''
+     ####   Get the appropriate tags in the html file that will help us get url address of the lyric pages
+     ####   eg:- "<a href="../lyrics/adele/daydreamer.html" target="_blank">Daydreamer</a>"
+     ####        will help us get the url address of the page that contains lyrics to the song
+     ####        "daydreamer" of the artist adele
+
+
     tags = url_functions.get_song_tags( base_url )
 
     ###Create a counter which will track the occurrence of the word
@@ -66,11 +67,11 @@ for name in names:
         if check == 3:
             break
 
-        '''
-            Get the url address of the site associated with the tag that contains lyrics.
-            eg:- "http://www.azlyrics.com/lyrics/adele/daydreamer.html"
 
-        '''
+    ####        Get the url address of the site associated with the tag that contains lyrics.
+    ####        eg:- "http://www.azlyrics.com/lyrics/adele/daydreamer.html"
+
+
         lyric_link = url_functions.get_lyrics_link( tag )
 
         ###Count the occurrence of the word
@@ -88,7 +89,7 @@ newlist = sorted(record, key = itemgetter('number'), reverse = True)
 
 #Print the result
 for dictionary in newlist:
-    print dictionary['name']+" -- number of times profanity used -- "+str(dictionary['number'])
+    print dictionary['name']+" -- number of times "+str(word)+" used -- "+str(dictionary['number'])
 
 
 
