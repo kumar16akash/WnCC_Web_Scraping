@@ -1,4 +1,4 @@
-# WnCC_Web_Scraping
+###WnCC_Web_Scraping###
 
 In a file named Input.txt, you have a list of n artists followed by a blank line, followed by a word x.
 Sort a list of n artists based on their frequency of usage of a word x.
@@ -25,9 +25,9 @@ Approach - We will be scraping " https://www.azlyrics.com"  to get hold of the l
                    
 We will be using the python module BeautifulSoup for scraping purposes
 
-#### Plans to implement multithreading ####
+Plans to implement multithreading soon. 
 
-####IMPORTANT####
+###IMPORTANT###
 
 It's important to attest some some sort of control mechanism so that you dont send a large number of requests
 You may be blocked by the site, if it happens so. This can be done by tweaking with the url_functions.py by adding wait() command.
