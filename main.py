@@ -54,7 +54,7 @@ for name in names:
      ####        "daydreamer" of the artist adele
 
 
-    tags = url_functions.get_song_tags( base_url )
+    tags = url_functions.get_song_tags( base_url, name )
 
     ###Create a counter which will track the occurrence of the word
     counter = 0
