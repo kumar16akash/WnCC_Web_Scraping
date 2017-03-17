@@ -59,13 +59,14 @@ for name in names:
     ###Create a counter which will track the occurrence of the word
     counter = 0
 
-
+    ####Keep a tab on number of songs searched. Use this to keep a limit on number of songs searched
     check = 0
+
     for tag in tags:
 
-
-        if check == 3:
-            break
+        ####Maximum song to be searched for a particular artist ###
+        #if check == 5:
+        #    break
 
 
     ####        Get the url address of the site associated with the tag that contains lyrics.
@@ -89,7 +90,7 @@ newlist = sorted(record, key = itemgetter('number'), reverse = True)
 
 #Print the result
 for dictionary in newlist:
-    print dictionary['name']+" -- number of times "+str(word)+" used -- "+str(dictionary['number'])
+    print dictionary['name']+" -- number of times \""+str(word)+"\" used -- "+str(dictionary['number'])
 
 
 
