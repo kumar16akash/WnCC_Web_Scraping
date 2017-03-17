@@ -75,7 +75,7 @@ for name in names:
         lyric_link = url_functions.get_lyrics_link( tag )
 
         ###Count the occurrence of the word
-        occurence = url_functions.get_occurence( lyric_link )
+        occurence = url_functions.get_occurence( lyric_link, word )
 
         ###Update counter
         counter += occurence

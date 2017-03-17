@@ -6,11 +6,11 @@ from bs4 import BeautifulSoup
  ###
  ###    eg:- for adele, its  "http://www.azlyrics.com/a/adele.html"
 
-def get_base_url( artist ):
+def get_base_url( str ):
 
-    first_letter = artist(0)
+    first_letter = str[0]
 
-    return "http://www.azlyrics.com/"+first_letter+"/"+artist+".html"
+    return "http://www.azlyrics.com/"+first_letter+"/"+str+".html"
 
 ### In the base-url html file, tags of interest are of the form
 ###   <a href="../lyrics/adele/daydreamer.html" target="_blank">Daydreamer</a>
