@@ -29,8 +29,12 @@ Plans to implement multithreading soon.
 
 ###IMPORTANT###
 
-It's important to attest some some sort of control mechanism so that you dont send a large number of requests
-You may be blocked by the site, if it happens so. This can be done by tweaking with the url_functions.py by adding wait() command.
+It's important to attest some some sort of control mechanism so that you dont send a large number of requests.You may be blocked by the site, if it happens so. This can be done by tweaking with the url_functions.py by adding wait() command.
+
 As of now, I havent added it yet. 
+
+Also, there is a 'check' variable in main.py. It controls the number of songs that we search the word for a particular artist.
+I've currently put the limit to 5. But one can remove it as a whhole, if onewants to search all the songs.
+
        
       
